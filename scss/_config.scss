@@ -1,0 +1,52 @@
+$primary-color: #f70058;
+$dark-color: #0c0e36;
+$light-color: #fff;
+$fw-normal: 400;
+$fw-bold: 700;
+$fw-black: 900;
+
+@function set-text-color($color) {
+    @if (lightness($color) > 70) {
+        @return $primary-color;
+    } @else {
+        @return $light-color;
+    }
+}
+
+@mixin set-bg($color) {
+    background: $color;
+    color: set-text-color($color);
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.875px;
+    font-size: 1rem;
+    font-weight: $fw-bold;
+    padding: 0.5rem 1.2rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.3rem;
+    transition: all 300ms ease-in;
+
+    &--primary {
+        @include set-bg($primary-color);
+
+        &:hover {
+            @include set-bg(rgba($light-color, 0));
+            outline: 3px solid $primary-color;
+            outline-offset: -3px;
+        }
+    }
+
+    &--outline {
+        @include set-bg(rgba($light-color, 0));
+        outline: 3px solid $primary-color;
+        outline-offset: -3px;
+
+        &:hover {
+            @include set-bg($primary-color);
+        }
+    }
+}

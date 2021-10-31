@@ -1,0 +1,41 @@
+@media (max-width: 900px) {
+    header {
+        grid-template-columns: 4rem 1fr 4rem;
+        grid-template-rows: auto auto auto;
+
+        nav {
+            padding: 1rem 0;
+        }
+
+        .weather {
+            grid-column: 1 / -1;
+            grid-row: 2 / 3;
+            padding-left: 4rem;
+
+            &__icon {
+                padding: 0.3rem 1.2rem;
+            }
+
+            &__details {
+                margin-left: 0.5rem;
+                padding: 0.3rem 1.2rem;
+                font-size: 0.75rem;
+            }
+            &__info {
+                span {
+                    margin-left: 3rem;
+                    font-size: 0.9rem;
+                    font-weight: $fw-normal;
+                }
+            }
+        }
+    }
+
+    main {
+        grid-template-columns: 4rem 1.5fr 1fr;
+
+        .content {
+            margin: 3rem 0;
+        }
+    }
+}

@@ -1,0 +1,121 @@
+@import 'config';
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.125rem;
+    color: $dark-color;
+    line-height: 1.6;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 7rem 1fr max-content;
+
+    nav {
+        grid-column: 2 / 3;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .navbar {
+            list-style: none;
+            display: flex;
+            margin-top: -0.4rem;
+
+            &__link {
+                display: inline-block;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $dark-color;
+                font-weight: $fw-bold;
+                font-size: 0.875rem;
+                letter-spacing: 1px;
+                margin-right: 2.5rem;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .weather {
+        grid-column: 3 / 4;
+        background: $dark-color;
+        color: $light-color;
+        display: flex;
+
+        &__icon {
+            background: $primary-color;
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        &__details {
+            padding: 0.5rem;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: $fw-bold;
+            color: rgba($light-color, 0.7);
+        }
+
+        &__info {
+            &:first-child {
+                position: relative;
+                margin-bottom: 0.4rem;
+
+                ::after {
+                    content: '';
+                    position: absolute;
+                    background: $light-color;
+                    opacity: 0.3;
+                    width: 100%;
+                    height: 2px;
+                    bottom: -0.3rem;
+                    display: block;
+                }
+            }
+
+            span {
+                margin-left: 1rem;
+                font-size: 0.75rem;
+                color: $light-color;
+            }
+        }
+    }
+}
+
+main {
+    background: url('../images/sebastian-staines-xZIFEPtRsRI-unsplash.jpg')
+        no-repeat center;
+    background-size: cover;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 7rem 1.2fr 1fr;
+
+    .content {
+        grid-column: 2 / 3;
+        margin-top: 7rem;
+
+        &__title {
+            font-size: 3rem;
+            line-height: 1;
+            padding-right: 5rem;
+        }
+
+        &__intro {
+            color: rgba($dark-color, 0.8);
+            margin: 2rem 0;
+        }
+    }
+}
