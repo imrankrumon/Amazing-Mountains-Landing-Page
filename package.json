@@ -1,0 +1,22 @@
+{
+  "name": "amazing-mountains-landing-page",
+  "version": "1.0.0",
+  "description": "Amazing mountains landing page designed by Kevin Powell",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imrankrumon/Amazing-Mountains-Landing-Page.git"
+  },
+  "author": "Imran Rumon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imrankrumon/Amazing-Mountains-Landing-Page/issues"
+  },
+  "homepage": "https://github.com/imrankrumon/Amazing-Mountains-Landing-Page/dist",
+  "dependencies": {
+    "ghpages": "0.0.10"
+  }
+}
